@@ -28,16 +28,19 @@
 
     <!-- Navegación-->
     <nav>
-        <a href="#sobre-mi" data-i18n="nav_about">Sobre mí</a>
-        <a href="#proyectos" data-i18n="nav_projects">Proyectos</a>
-        <a href="#habilidades" data-i18n="nav_skills">Habilidades</a>
-        <a href="#contacto" data-i18n="nav_contact">Contacto</a>
-        <button id="btn-idioma" type="button" aria-label="Cambiar idioma">
-            <span data-lang-option="es">ES</span>
-            <span class="separador-idioma">|</span>
-            <span data-lang-option="en">EN</span>
-        </button>
-        <button id="btn-tema" type="button" aria-label="Cambiar tema">🌙</button>
+        <button id="btn-menu" class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">☰</button>
+        <div id="nav-links" class="nav-links">
+            <a href="#sobre-mi" data-i18n="nav_about">Sobre mí</a>
+            <a href="#proyectos" data-i18n="nav_projects">Proyectos</a>
+            <a href="#habilidades" data-i18n="nav_skills">Habilidades</a>
+            <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+            <button id="btn-idioma" type="button" aria-label="Cambiar idioma">
+                <span data-lang-option="es">ES</span>
+                <span class="separador-idioma">|</span>
+                <span data-lang-option="en">EN</span>
+            </button>
+            <button id="btn-tema" type="button" aria-label="Cambiar tema">🌙</button>
+        </div>
     </nav>
 
     <!-- INICIO-->
@@ -222,5 +225,8 @@
         </div>
     </section>
 </body>
+
+</html>
+
 
 </html>
