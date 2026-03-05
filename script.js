@@ -118,6 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let idiomaActual = localStorage.getItem('idioma') || 'es';
     const btnIdioma = document.getElementById('btn-idioma');
     const btnTema = document.getElementById('btn-tema');
+    const btnMenu = document.getElementById('btn-menu');
+    const navLinks = document.getElementById('nav-links');
     const btnCvRapido = document.getElementById('btn-cv-rapido');
     const panelCvRapido = document.getElementById('panel-cv-rapido');
 
@@ -273,6 +275,34 @@ document.addEventListener('DOMContentLoaded', () => {
             const abierto = btnCvRapido.getAttribute('aria-expanded') === 'true';
             btnCvRapido.setAttribute('aria-expanded', String(!abierto));
             panelCvRapido.hidden = abierto;
+        });
+    }
+
+    if (btnMenu && navLinks) {
+        const cerrarMenu = () => {
+            navLinks.classList.remove('abierto');
+            btnMenu.setAttribute('aria-expanded', 'false');
+            btnMenu.textContent = '☰';
+        };
+
+        btnMenu.addEventListener('click', () => {
+            const abierto = navLinks.classList.toggle('abierto');
+            btnMenu.setAttribute('aria-expanded', String(abierto));
+            btnMenu.textContent = abierto ? '✕' : '☰';
+        });
+
+        navLinks.querySelectorAll('a').forEach((enlace) => {
+            enlace.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    cerrarMenu();
+                }
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                cerrarMenu();
+            }
         });
     }
 
