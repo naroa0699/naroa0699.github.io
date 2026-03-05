@@ -1,0 +1,667 @@
+/* Los colores de nuestra paleta coquette */
+:root {
+    --rosa-fondo: #fff5f7;
+    --rosa-suave: #f2c4ce;
+    --rosa-acento: #d4798a;
+    --texto-oscuro: #3d2b2b;
+    --texto-gris: #9e7e7e;
+}
+
+/* Estilos generales de toda la página */
+body {
+    background-color: var(--rosa-fondo);
+    color: var(--texto-oscuro);
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    /* prueba cambiando este número */
+}
+
+/* Títulos grandes con la fuente elegante */
+h1,
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+/* Barra de navegación */
+nav {
+    background-color: white;
+    padding: 1.5rem 3rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+    border-bottom: 1px solid var(--rosa-suave);
+}
+
+/* Los links del nav */
+nav a {
+    color: var(--texto-gris);
+    text-decoration: none;
+    /* quita el subrayado */
+    font-size: 1.00rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    /* animación suave al hacer hover */
+}
+
+/* Cuando pasas el ratón por encima */
+nav a:hover {
+    color: var(--rosa-acento);
+}
+
+/* Sección de inicio */
+#inicio {
+    text-align: center;
+    padding: 8rem 2rem;
+    border-bottom: 1px solid var(--rosa-suave);
+}
+
+.saludo {
+    color: var(--rosa-acento);
+    letter-spacing: 0.2em;
+    font-size: 1.00rem;
+    margin-bottom: 1rem;
+}
+
+#inicio h1 {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin: 1rem 0;
+}
+
+#inicio h1 em {
+    color: var(--rosa-acento);
+}
+
+.descripcion {
+    color: var(--texto-gris);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+/* El botón */
+.boton {
+    background-color: var(--rosa-acento);
+    color: white;
+    text-decoration: none;
+    padding: 0.9rem 2.5rem;
+    border-radius: 50px;
+    /* lo hace redondeado */
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: var(--texto-oscuro);
+}
+
+.boton-secundario {
+    background: transparent;
+    border: 1px solid var(--rosa-suave);
+    color: var(--rosa-acento);
+}
+
+.boton-secundario:hover {
+    background: var(--rosa-fondo);
+}
+
+.inicio-acciones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.quick-cv-panel {
+    margin: 1.2rem auto 0;
+    max-width: 760px;
+    background: white;
+    border: 1px solid var(--rosa-suave);
+    border-radius: 16px;
+    padding: 1.2rem 1.4rem;
+    text-align: left;
+}
+
+.quick-cv-titulo {
+    margin: 0 0 0.7rem;
+    color: var(--rosa-acento);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+}
+
+.quick-cv-linea {
+    margin: 0.3rem 0;
+    color: var(--texto-gris);
+    font-size: 0.88rem;
+}
+
+.logros-grid {
+    margin-top: 2.2rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(130px, 1fr));
+    gap: 1rem;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logro-item {
+    background: white;
+    border: 1px solid var(--rosa-suave);
+    border-radius: 16px;
+    padding: 1rem;
+}
+
+.logro-numero {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--rosa-acento);
+    margin: 0;
+}
+
+.logro-texto {
+    margin: 0.35rem 0 0;
+    color: var(--texto-gris);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* Sección sobre mí */
+#sobre-mi {
+    padding: 6rem 4rem;
+    border-bottom: 1px solid var(--rosa-suave);
+}
+
+#sobre-mi h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-style: italic;
+    color: var(--rosa-acento);
+    margin-bottom: 3rem;
+}
+
+/* Usamos flex para poner texto y datos en dos columnas */
+.sobre-mi-contenido {
+    display: flex;
+    gap: 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+    /* centra el contenido */
+}
+
+.sobre-mi-texto {
+    flex: 2;
+    /* ocupa el doble de espacio que los datos */
+    line-height: 1.9;
+    color: var(--texto-gris);
+}
+
+.sobre-mi-texto strong {
+    color: var(--texto-oscuro);
+}
+
+.sobre-mi-datos {
+    flex: 1;
+    border-left: 1px solid var(--rosa-suave);
+    padding-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Cada fila de dato */
+.dato {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.dato-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--rosa-acento);
+}
+
+.dato-valor {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+}
+
+/* Sección proyectos */
+#proyectos {
+    padding: 6rem 4rem;
+    border-bottom: 1px solid var(--rosa-suave);
+}
+
+#proyectos h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-style: italic;
+    color: var(--rosa-acento);
+    margin-bottom: 3rem;
+}
+
+/* Grid de 3 columnas */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Cada tarjeta */
+.proyecto-card {
+    background: white;
+    border: 1px solid var(--rosa-suave);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Al pasar el ratón, la tarjeta sube un poco */
+.proyecto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(212, 121, 138, 0.15);
+}
+
+.proyecto-numero {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--rosa-acento);
+}
+
+.proyecto-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+}
+
+.proyecto-card p {
+    color: var(--texto-gris);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Tags de tecnologías */
+.proyecto-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.tag {
+    background: var(--rosa-fondo);
+    border: 1px solid var(--rosa-suave);
+    color: var(--rosa-acento);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+}
+
+.proyecto-acciones {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.proyecto-link {
+    text-decoration: none;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--rosa-acento);
+    border: 1px solid var(--rosa-suave);
+    padding: 0.45rem 0.85rem;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.proyecto-link:hover {
+    border-color: var(--rosa-acento);
+    color: var(--texto-oscuro);
+}
+
+/* Sección habilidades */
+#habilidades {
+    padding: 6rem 4rem;
+    border-bottom: 1px solid var(--rosa-suave);
+}
+
+#habilidades h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-style: italic;
+    color: var(--rosa-acento);
+    margin-bottom: 3rem;
+}
+
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    /* Se ajusta solo según el número de items */
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.habilidad-item {
+    background: white;
+    border: 1px solid var(--rosa-suave);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.habilidad-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(212, 121, 138, 0.15);
+}
+
+.habilidad-icono {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.habilidad-nombre {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.habilidad-nivel {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--rosa-acento);
+}
+
+/* Sección contacto */
+#contacto {
+    padding: 6rem 4rem;
+    text-align: center;
+}
+
+#contacto h2 {
+    font-size: 4rem;
+    font-style: italic;
+    color: var(--rosa-acento);
+    margin-bottom: 1rem;
+}
+
+.contacto-descripcion {
+    color: var(--texto-gris);
+    font-size: 1.50rem;
+    max-width: 400px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.8;
+}
+
+.contacto-acciones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+/* Links de redes sociales */
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.redes a {
+    color: var(--texto-gris);
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.redes a:hover {
+    color: var(--rosa-acento);
+}
+
+/* Footer */
+footer {
+    background: white;
+    border-top: 1px solid var(--rosa-suave);
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    color: var(--texto-gris);
+}
+
+/* Lazito animado */
+.lazito {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+/* El lazito sube y baja suavemente para siempre */
+@keyframes flotar {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Estado inicial: las secciones empiezan invisibles */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Cuando tienen la clase "visible", aparecen */
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 📱 RESPONSIVE — se aplica cuando la pantalla es menor de 768px */
+@media (max-width: 768px) {
+
+    /* El título del hero más pequeño */
+    #inicio h1 {
+        font-size: 3rem;
+    }
+
+    /* Sobre mí en una sola columna */
+    .sobre-mi-contenido {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    /* Quitamos el borde izquierdo de los datos */
+    .sobre-mi-datos {
+        border-left: none;
+        border-top: 1px solid var(--rosa-suave);
+        padding-left: 0;
+        padding-top: 2rem;
+    }
+
+    /* Proyectos en una sola columna */
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Habilidades en 2 columnas en vez de 4 */
+    .habilidades-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Nav más pequeño */
+    nav {
+        padding: 1rem 1.5rem;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    /* Secciones con menos padding */
+    section {
+        padding: 4rem 2rem;
+    }
+
+    .logros-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+    }
+
+    .quick-cv-panel {
+        max-width: 100%;
+    }
+
+}
+
+/* Ocultamos el cursor normal solo en dispositivos con ratón */
+@media (pointer: fine) {
+    * {
+        cursor: none;
+    }
+}
+
+/* Nuestro cursor personalizado */
+.cursor {
+    position: fixed;
+    pointer-events: none;
+    /* que no interfiera con los clicks */
+    font-size: 1.2rem;
+    z-index: 9999;
+    /* que esté por encima de todo */
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
+}
+
+/* En pantallas táctiles no mostramos cursor decorativo */
+@media (pointer: coarse) {
+    .cursor {
+        display: none;
+    }
+}
+
+/* Botón de modo oscuro */
+#btn-tema,
+#btn-idioma {
+    background: none;
+    border: 1px solid var(--rosa-suave);
+    border-radius: 50px;
+    padding: 0.3rem 0.8rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+#btn-tema:hover,
+#btn-idioma:hover {
+    border-color: var(--rosa-acento);
+}
+
+#btn-idioma {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+#btn-idioma [data-lang-option] {
+    color: var(--texto-gris);
+    opacity: 0.75;
+    transition: opacity 0.3s, color 0.3s;
+}
+
+#btn-idioma [data-lang-option].activo {
+    opacity: 1;
+    color: var(--rosa-acento);
+}
+
+#btn-idioma .separador-idioma {
+    opacity: 0.35;
+    color: var(--texto-gris);
+}
+
+body.oscuro #btn-idioma [data-lang-option] {
+    color: var(--texto-gris);
+    opacity: 0.9;
+}
+
+body.oscuro #btn-idioma [data-lang-option].activo {
+    color: var(--texto-oscuro);
+    opacity: 1;
+}
+
+/* Variables del modo oscuro */
+body.oscuro {
+    --rosa-fondo: #1a1a2e;
+    --rosa-suave: #3d2b4a;
+    --rosa-acento: #c9a0dc;
+    --texto-oscuro: #f0e6ff;
+    --texto-gris: #b39dbd;
+}
+
+/* Tarjetas en modo oscuro */
+body.oscuro .proyecto-card,
+body.oscuro .habilidad-item,
+body.oscuro .logro-item,
+body.oscuro .quick-cv-panel {
+    background: #2a1a3e;
+    border-color: var(--rosa-suave);
+}
+
+/* Nav en modo oscuro */
+body.oscuro nav {
+    background: #1a1a2e;
+}
+
+/* Footer en modo oscuro */
+body.oscuro footer {
+    background: #1a1a2e;
+}
+
+/* Separador decorativo */
+.separador {
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 0.8rem;
+    color: var(--rosa-acento);
+    padding: 1rem 0;
+    opacity: 0.5;
+}
+/* Secciones alternas con fondo diferente */
+#sobre-mi, #habilidades {
+  background: white;
+}
+
+/* En modo oscuro también */
+body.oscuro #sobre-mi,
+body.oscuro #habilidades {
+  background: #2a1a3e;
+}

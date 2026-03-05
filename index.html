@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="meta-description" name="description" content="Portfolio de Naroa, desarrolladora multiplataforma bilingüe especializada en Java, Android, web y soluciones de software eficientes.">
+    <meta property="og:type" content="website">
+    <meta id="og-title" property="og:title" content="Mi Portfolio | Naroa">
+    <meta id="og-description" property="og:description" content="Conoce mis proyectos, habilidades y experiencia como desarrolladora multiplataforma.">
+    <meta property="og:url" content="https://naroa0699.github.io/portfolio/">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/104014116?v=4">
+    <title>Mi Portfolio</title>
+
+    <!-- Le decimos al html donde esta nuestro archivo de estilos-->
+    <link rel="stylesheet" href="estilo.css">
+
+    <!-- Una fuente bonita y coquette de Google Fonts-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Lato:wght@300;400&display=swap"
+        rel="stylesheet">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="cursor" id="cursor">🌸</div>
+
+    <!-- Navegación-->
+    <nav>
+        <a href="#sobre-mi" data-i18n="nav_about">Sobre mí</a>
+        <a href="#proyectos" data-i18n="nav_projects">Proyectos</a>
+        <a href="#habilidades" data-i18n="nav_skills">Habilidades</a>
+        <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+        <button id="btn-idioma" type="button" aria-label="Cambiar idioma">
+            <span data-lang-option="es">ES</span>
+            <span class="separador-idioma">|</span>
+            <span data-lang-option="en">EN</span>
+        </button>
+        <button id="btn-tema" type="button" aria-label="Cambiar tema">🌙</button>
+    </nav>
+
+    <!-- INICIO-->
+    <section id="inicio">
+        <div class="lazito">🎀</div>
+        <p class="saludo" data-i18n="hero_greeting">Bienvenido a mi portfolio</p>
+        <h1 data-i18n-html="hero_title">Hola, soy<br><em>Naroa</em></h1>
+        <p class="descripcion">
+            🌸<span id="texto-animado"></span>
+        </p>
+        <div class="inicio-acciones">
+            <a href="#proyectos" class="boton" data-i18n="hero_cta">Ver mis proyectos</a>
+            <button id="btn-cv-rapido" type="button" class="boton boton-secundario" data-i18n="quick_cv_button" aria-expanded="false" aria-controls="panel-cv-rapido">CV rápido</button>
+        </div>
+
+        <div id="panel-cv-rapido" class="quick-cv-panel" hidden>
+            <p class="quick-cv-titulo" data-i18n="quick_cv_title">Resumen en 30 segundos</p>
+            <p class="quick-cv-linea" data-i18n="quick_cv_profile">Desarrolladora Multiplataforma bilingüe (Java, Android y Web).</p>
+            <p class="quick-cv-linea" data-i18n="quick_cv_stack">Stack principal: Java · Android Studio · HTML · CSS · JavaScript · SQL.</p>
+            <p class="quick-cv-linea" data-i18n="quick_cv_focus">Enfoque: soluciones eficientes, UI cuidada y desarrollo escalable.</p>
+            <p class="quick-cv-linea" data-i18n="quick_cv_contact">Contacto: naroamarco9@gmail.com · GitHub: @naroa0699.</p>
+        </div>
+
+        <div class="logros-grid">
+            <article class="logro-item">
+                <p class="logro-numero">03+</p>
+                <p class="logro-texto" data-i18n="hero_metric_projects">Proyectos publicados</p>
+            </article>
+            <article class="logro-item">
+                <p class="logro-numero">08+</p>
+                <p class="logro-texto" data-i18n="hero_metric_tech">Tecnologías trabajadas</p>
+            </article>
+            <article class="logro-item">
+                <p class="logro-numero" data-i18n="hero_metric_status_value">Now</p>
+                <p class="logro-texto" data-i18n="hero_metric_status">Disponible para colaborar</p>
+            </article>
+        </div>
+    </section>
+
+     <!-- SEPARADOR -->
+    <div class="separador">🌸 ✿ 🎀 ✿ 🌸</div>
+
+    <!--SOBRE MI-->
+    <section id="sobre-mi">
+        <h2 data-i18n="about_title">Sobre mí</h2>
+        <div class="sobre-mi-contenido">
+            <div class="sobre-mi-texto">
+                <p data-i18n-html="about_p1">Hola, soy <strong>Naroa</strong>, graduada en <strong>Desarrollo de Aplicaciones Multiplataforma
+                        (DAM)</strong> con formación bilingüe. Mi perfil técnico está enfocado en el diseño e
+                    implementación de soluciones de software robustas para diversos entornos y dispositivos.</p>
+                <p data-i18n="about_p2">Cuento con capacidad para trabajar en entornos internacionales, gestionando el ciclo de vida del
+                    desarrollo desde la lógica de servidor hasta la interfaz de usuario. Mi objetivo es aportar
+                    soluciones eficientes y escalables, aplicando patrones de diseño y metodologías que aseguren la
+                    calidad técnica del producto final.</p>
+        </div>
+        <div class="sobre-mi-datos">
+            <div class="dato">
+                <span class="dato-label" data-i18n="about_location_label">Ubicación </span>
+                <span class="dato-valor" data-i18n="about_location_value">España, Madrid</span>
+            </div>
+            <div class="dato">
+                <span class="dato-label" data-i18n="about_specialty_label">Especialidad </span>
+                <span class="dato-valor" data-i18n="about_specialty_value">Desarrollo Multiplataforma (Bilingüe)</span>
+            </div>
+            <div class="dato">
+                <span class="dato-label" data-i18n="about_availability_label">Disponibilidad </span>
+                <span class="dato-valor" data-i18n="about_availability_value">Abierta a proyectos</span>
+            </div>
+        </div>
+        </div>
+    </section>
+
+     <!-- SEPARADOR -->
+    <div class="separador">🌸 ✿ 🎀 ✿ 🌸</div>
+
+    <!-- PROYECTOS-->
+    <section id="proyectos">
+        <h2 data-i18n="projects_title">Proyectos</h2>
+        <div class="proyectos-grid">
+            <article class="proyecto-card">
+                <span class="proyecto-numero">01</span>
+                <h3 data-i18n="project1_title">Arkanoid</h3>
+                <p data-i18n="project1_desc">Clon del videojuego clásico Arkanoid / Breakout desarrollado en Android con Java puro, sin motores
+                    externos. Construido como práctica de programación de videojuegos 2D implementando manualmente el Game
+                    Loop, física de colisiones, Sprite Sheets y gestión de hilos.</p>
+                <p class="proyecto-demo-note" data-i18n="project1_demo_note">Demo jugable en Android (APK).</p>
+                <div class="proyecto-tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Android Studio</span>
+                </div>
+                <div class="proyecto-acciones">
+                    <a class="proyecto-link" href="https://github.com/naroa0699/ArkanoidGame/raw/master/ArNaronoid.apk" target="_blank" rel="noopener noreferrer" data-i18n="project_apk">Descargar APK</a>
+                    <a class="proyecto-link" href="https://github.com/naroa0699/ArkanoidGame.git" target="_blank" rel="noopener noreferrer" data-i18n="project_code">Código</a>
+                </div>
+            </article>
+
+            <article class="proyecto-card">
+                <span class="proyecto-numero">02</span>
+                <h3 data-i18n="project2_title">Mi Portfolio</h3>
+                <p data-i18n="project2_desc">Página web construida desde cero con HTML, CSS y JavaScript.
+                    Cuenta con animaciones al hacer scroll, texto que se escribe solo, cursor personalizado
+                    con lazito y modo oscuro. Totalmente responsive para móvil.
+                </p>
+                <div class="proyecto-tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">CSS</span>
+                </div>
+                <div class="proyecto-acciones">
+                    <a class="proyecto-link" href="index.html" data-i18n="project_demo">Demo</a>
+                    <a class="proyecto-link" href="https://github.com/naroa0699/MiPortfolio.git" target="_blank" rel="noopener noreferrer" data-i18n="project_code">Código</a>
+                </div>
+            </article>
+
+            <article class="proyecto-card">
+                <span class="proyecto-numero">03</span>
+                <h3 data-i18n="project3_title">Notes</h3>
+                <p data-i18n="project3_desc">Repositorio de notas en Python para practicar estructura, organización de contenido y colaboración en GitHub.</p>
+                <div class="proyecto-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">GitHub</span>
+                </div>
+                <div class="proyecto-acciones">
+                    <a class="proyecto-link" href="https://github.com/basesdepatos/notes" target="_blank" rel="noopener noreferrer" data-i18n="project_repo">Repositorio</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+     <!-- SEPARADOR -->
+    <div class="separador">🌸 ✿ 🎀 ✿ 🌸</div>
+
+    <!-- HABILIDADES-->
+    <section id="habilidades">
+        <h2 data-i18n="skills_title">Habilidades</h2>
+        <div class="habilidades-grid">
+
+            <div class="habilidad-item">
+                <span class="habilidad-icono">💻</span>
+                <p class="habilidad-nombre">HTML & CSS</p>
+                <p class="habilidad-nivel" data-i18n="skill_level">Intermedio</p>
+            </div>
+
+            <div class="habilidad-item">
+                <span class="habilidad-icono">⚡</span>
+                <p class="habilidad-nombre">Java</p>
+                <p class="habilidad-nivel" data-i18n="skill_level">Intermedio</p>
+            </div>
+
+            <div class="habilidad-item">
+                <span class="habilidad-icono">🗄️</span>
+                <p class="habilidad-nombre">SQL</p>
+                <p class="habilidad-nivel" data-i18n="skill_level">Intermedio</p>
+            </div>
+
+            <div class="habilidad-item">
+                <span class="habilidad-icono">🎨</span>
+                <p class="habilidad-nombre">Figma</p>
+                <p class="habilidad-nivel" data-i18n="skill_level">Intermedio</p>
+            </div>
+
+        </div>
+    </section>
+
+     <!-- SEPARADOR -->
+    <div class="separador">🌸 ✿ 🎀 ✿ 🌸</div>
+
+    <!-- CONTACTO-->
+    <section id="contacto">
+        <h2 data-i18n="contact_title">Hablemos</h2>
+        <p class="contacto-descripcion" data-i18n="contact_desc">
+            ¿Tienes un proyecto en mente o quieres contactarme?
+            Escríbeme, estaré encantada de leerlo.
+        </p>
+        <div class="contacto-acciones">
+            <a href="mailto:naroamarco9@gmail.com" class="boton" data-i18n="contact_cta">Enviar mensaje</a>
+            <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="boton boton-secundario" data-i18n="contact_cta_linkedin">Hablemos por LinkedIn</a>
+        </div>
+
+        <div class="redes">
+            <a href="https://github.com/naroa0699" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+    </section>
+</body>
+
+</html>
