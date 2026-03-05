@@ -33,7 +33,25 @@ nav {
     display: flex;
     gap: 2rem;
     justify-content: flex-end;
+    align-items: center;
     border-bottom: 1px solid var(--rosa-suave);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--rosa-suave);
+    border-radius: 10px;
+    color: var(--rosa-acento);
+    font-size: 1.1rem;
+    line-height: 1;
+    padding: 0.3rem 0.55rem;
 }
 
 /* Los links del nav */
@@ -519,14 +537,60 @@ section.visible {
 
     /* Nav más pequeño */
     nav {
-        padding: 1rem 1.5rem;
-        gap: 1rem;
+        padding: 0.75rem 1rem;
+        gap: 0;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
         justify-content: center;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        margin-top: 0.8rem;
+        padding-top: 0.8rem;
+        border-top: 1px solid var(--rosa-suave);
+    }
+
+    .nav-links.abierto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.7rem;
+    }
+
+    nav a {
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+    }
+
+    #btn-tema,
+    #btn-idioma {
+        font-size: 0.78rem;
+        padding: 0.28rem 0.62rem;
+    }
+
+    #btn-idioma {
+        font-size: 0.62rem;
+        letter-spacing: 0.08em;
     }
 
     /* Secciones con menos padding */
     section {
         padding: 4rem 2rem;
+    }
+
+    #sobre-mi,
+    #proyectos,
+    #habilidades,
+    #contacto {
+        padding: 4rem 1.25rem;
     }
 
     .logros-grid {
@@ -536,6 +600,11 @@ section.visible {
 
     .quick-cv-panel {
         max-width: 100%;
+    }
+
+    .separador {
+        letter-spacing: 0.22rem;
+        font-size: 1rem;
     }
 
 }
@@ -639,6 +708,11 @@ body.oscuro .quick-cv-panel {
 /* Nav en modo oscuro */
 body.oscuro nav {
     background: #1a1a2e;
+}
+
+body.oscuro .nav-toggle {
+    color: var(--texto-oscuro);
+    border-color: var(--rosa-suave);
 }
 
 /* Footer en modo oscuro */
